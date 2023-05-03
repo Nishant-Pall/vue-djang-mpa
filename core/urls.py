@@ -1,6 +1,7 @@
 from django.urls import path
 from core.views import HomeView, MathGameView, AnagramGameView
 
+app_name = "core"
 urlpatterns = [
     path("", HomeView.as_view(), name="homepage"),
     path("math-game/", MathGameView.as_view(), name="math-game"),
