@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+{% block html %}
 <html lang="en">
 	<head>
+		{% block head %}
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{% block title %}{% endblock%} | Games</title>
+		<title>{% block title %}{% endblock %} | Games</title>
+		{% endblock head %}
 	</head>
 	<body>
+		{% block body %}
 		<header>
 			<nav>
 				<a href="{% url 'core:homepage' %}">Home</a>
@@ -14,6 +18,7 @@
 				<a href="{% url 'core:anagram-game' %}">Anagram Game</a>
 			</nav>
 		</header>
-		{% block main %}{% endblock %}
+		{% block main %}{% endblock %} {% endblock %}
 	</body>
 </html>
+{% endblock %}
